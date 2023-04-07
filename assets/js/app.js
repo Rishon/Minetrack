@@ -59,7 +59,6 @@ export class App {
     this.socketManager.reset()
     this.sortController.reset()
     this.graphDisplayManager.reset()
-    this.percentageBar.reset()
 
     // Undefine publicConfig, resynced during the connection handshake
     this.publicConfig = undefined

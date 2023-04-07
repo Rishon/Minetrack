@@ -123,14 +123,14 @@ export class SocketManager {
         clearInterval(reconnectInterval)
 
         // Update displayed text
-        this._app.caption.set('Reconnecting...')
+        this._app.caption.set('...מתחבר מחדש')
 
         // Attempt reconnection
         // Only attempt when reconnectDelaySeconds === 0 and not <= 0, otherwise multiple attempts may be started
         this.createWebSocket()
       } else if (this._reconnectDelaySeconds > 0) {
         // Update displayed text
-        this._app.caption.set(`Reconnecting in ${this._reconnectDelaySeconds}s...`)
+        this._app.caption.set(`מתחבר מחדש תוך ${this._reconnectDelaySeconds} שניות`)
       }
     }, 1000)
   }

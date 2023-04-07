@@ -67,13 +67,6 @@ export class SortController {
 
   reset () {
     this._lastSortedServers = undefined
-
-    // Reset modified DOM structures
-    this._buttonElement.style.display = 'none'
-    this._textElement.innerText = '...'
-
-    // Remove bound DOM event listeners
-    this._buttonElement.removeEventListener('click', this.handleSortByButtonClick)
   }
 
   loadLocalStorage () {

@@ -435,11 +435,5 @@ export class GraphDisplayManager {
 
       this._resizeRequestTimeout = undefined
     }
-
-    // Reset modified DOM structures
-    document.getElementById('big-graph-checkboxes').innerHTML = ''
-    document.getElementById('big-graph-controls').style.display = 'none'
-
-    document.getElementById('settings-toggle').style.display = 'none'
   }
 }
