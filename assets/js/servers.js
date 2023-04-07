@@ -2,7 +2,7 @@ import uPlot from 'uplot'
 
 import { RelativeScale } from './scale'
 
-import { formatNumber, formatTimestampSeconds, formatDate, formatMinecraftServerAddress, formatMinecraftVersions } from './util'
+import { formatNumber, formatTimestampSeconds, formatDate, formatMinecraftServerAddress } from './util'
 import { uPlotTooltipPlugin } from './plugins'
 
 import MISSING_FAVICON from 'url:../images/missing_favicon.ico'
@@ -220,10 +220,7 @@ export class ServerRegistration {
     element.style.display = 'none'
   }
 
-  updateServerStatus (ping, minecraftVersions) {
-    if (ping.versions) {
-      this._renderValue('version', formatMinecraftVersions(ping.versions, minecraftVersions[this.data.type]) || '')
-    }
+  updateServerStatus (ping) {
 
     if (ping.recordData) {
       this._renderValue('record', (element) => {
@@ -236,15 +233,6 @@ export class ServerRegistration {
       })
 
       this.lastRecordData = ping.recordData
-    }
-
-    if (ping.graphPeakData) {
-      this._renderValue('peak', (element) => {
-        element.innerText = formatNumber(ping.graphPeakData.playerCount)
-        element.title = `At ${formatTimestampSeconds(ping.graphPeakData.timestamp)}`
-      })
-
-      this.lastPeakData = ping.graphPeakData
     }
 
     if (ping.error) {
@@ -286,7 +274,6 @@ export class ServerRegistration {
         <span class="server-error" id="error_${this.serverId}"></span>
         <span class="server-label" id="player-count_${this.serverId}">שחקנים: <span class="server-value" id="player-count-value_${this.serverId}"></span></span>
         <span class="server-label" id="record_${this.serverId}">שיא שחקנים: <span class="server-value" id="record-value_${this.serverId}">-</span></span>
-        <span class="server-label" id="version_${this.serverId}"></span>
       </div>
       <div class="column column-graph" id="chart_${this.serverId}"></div>`
 
@@ -296,7 +283,7 @@ export class ServerRegistration {
   }
 
   updateHighlightedValue (selectedCategory) {
-    ['player-count', 'peak', 'record'].forEach((category) => {
+    ['player-count', 'record'].forEach((category) => {
       const labelElement = document.getElementById(`${category}_${this.serverId}`)
       const valueElement = document.getElementById(`${category}-value_${this.serverId}`)
 
@@ -308,5 +295,9 @@ export class ServerRegistration {
         valueElement.setAttribute('class', 'server-value')
       }
     })
+  }
+
+  initEventListeners () {
+    //
   }
 }

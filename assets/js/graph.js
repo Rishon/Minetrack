@@ -298,9 +298,6 @@ export class GraphDisplayManager {
         show: false
       }
     }, this.getGraphData(), document.getElementById('big-graph'))
-
-    // Show the settings-toggle element
-    document.getElementById('settings-toggle').style.display = 'inline-block'
   }
 
   redraw = () => {
@@ -341,24 +338,6 @@ export class GraphDisplayManager {
     }
 
     this._resizeRequestTimeout = undefined
-  }
-
-  initEventListeners () {
-    if (!this._initEventListenersOnce) {
-      this._initEventListenersOnce = true
-
-      // These listeners should only be init once since they attach to persistent elements
-      document.getElementById('settings-toggle').addEventListener('click', this.handleSettingsToggle, false)
-
-      document.querySelectorAll('.graph-controls-show').forEach((element) => {
-        element.addEventListener('click', this.handleShowButtonClick, false)
-      })
-    }
-
-    // These listeners should be bound each #initEventListeners call since they are for newly created elements
-    document.querySelectorAll('.graph-control').forEach((element) => {
-      element.addEventListener('click', this.handleServerButtonClick, false)
-    })
   }
 
   handleServerButtonClick = (event) => {

@@ -46,17 +46,11 @@ export class FavoritesManager {
   handleFavoriteButtonClick = (serverRegistration) => {
     serverRegistration.isFavorite = !serverRegistration.isFavorite
 
-    // Update the displayed favorite icon
-    document.getElementById(`favorite-toggle_${serverRegistration.serverId}`).setAttribute('class', this.getIconClass(serverRegistration.isFavorite))
-
     // Request the app controller instantly re-sort the server listing
     // This handles the favorite sorting logic internally
     this._app.sortController.sortServers()
 
     this._app.graphDisplayManager.handleServerIsFavoriteUpdate(serverRegistration)
-
-    // Write an updated settings payload
-    this.updateLocalStorage()
   }
 
   getIconClass (isFavorite) {

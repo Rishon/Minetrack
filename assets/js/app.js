@@ -2,7 +2,6 @@ import { ServerRegistry } from './servers'
 import { SocketManager } from './socket'
 import { SortController } from './sort'
 import { GraphDisplayManager } from './graph'
-import { PercentageBar } from './percbar'
 import { FavoritesManager } from './favorites'
 import { Tooltip, Caption, formatNumber } from './util'
 
@@ -16,7 +15,6 @@ export class App {
     this.socketManager = new SocketManager(this)
     this.sortController = new SortController(this)
     this.graphDisplayManager = new GraphDisplayManager(this)
-    this.percentageBar = new PercentageBar(this)
     this.favoritesManager = new FavoritesManager(this)
 
     this._taskIds = []
@@ -44,15 +42,6 @@ export class App {
   }
 
   handleSyncComplete () {
-    this.caption.hide()
-
-    // Load favorites since all servers are registered
-    this.favoritesManager.loadLocalStorage()
-
-    // Run a single bulk server sort instead of per-add event since there may be multiple
-    this.sortController.show()
-    this.percentageBar.redraw()
-
     // The data may not be there to correctly compute values, but run an attempt
     // Otherwise they will be updated by #initTasks
     this.updateGlobalStats()
@@ -124,7 +113,7 @@ export class App {
 
     // Handle the last known state (if any) as an incoming update
     // This triggers the main update pipeline and enables centralized update handling
-    serverRegistration.updateServerStatus(payload, this.publicConfig.minecraftVersions)
+    serverRegistration.updateServerStatus(payload)
 
     // Allow the ServerRegistration to bind any DOM events with app instance context
     serverRegistration.initEventListeners()

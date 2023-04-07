@@ -19,7 +19,7 @@ export class SocketManager {
 
     // The backend will automatically push data once connected
     this._webSocket.onopen = () => {
-      this._app.caption.set('Loading...')
+      this._app.caption.set('...מבצע תקשורת')
 
       // Reset reconnection scheduling since the WebSocket has been established
       this._reconnectDelayBase = 0
@@ -33,9 +33,9 @@ export class SocketManager {
       // See https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent
       // Treat other codes as active errors (besides connectivity errors) when displaying the message
       if (event.code === 1006) {
-        this._app.caption.set('Lost connection!')
+        this._app.caption.set('תקשורת אבדה!')
       } else {
-        this._app.caption.set('Disconnected due to error.')
+        this._app.caption.set('תקשורת אבדה!')
       }
 
       // Schedule socket reconnection attempt
@@ -91,7 +91,6 @@ export class SocketManager {
             this._app.graphDisplayManager.redraw()
           }
 
-          this._app.percentageBar.redraw()
           this._app.updateGlobalStats()
 
           break
@@ -99,34 +98,6 @@ export class SocketManager {
 
         case 'historyGraph': {
           this._app.graphDisplayManager.buildPlotInstance(payload.timestamps, payload.graphData)
-
-          // Build checkbox elements for graph controls
-          let lastRowCounter = 0
-          let controlsHTML = ''
-
-          this._app.serverRegistry.getServerRegistrations()
-            .map(serverRegistration => serverRegistration.data.name)
-            .sort()
-            .forEach(serverName => {
-              const serverRegistration = this._app.serverRegistry.getServerRegistration(serverName)
-
-              controlsHTML += `<td>
-                <input type="checkbox" class="graph-control" minetrack-server-id="${serverRegistration.serverId}" ${serverRegistration.isVisible ? 'checked' : ''}>
-                ${serverName}
-                </input></td>`
-
-              // Occasionally break table rows using a magic number
-              if (++lastRowCounter % 6 === 0) {
-                controlsHTML += '</tr><tr>'
-              }
-            })
-
-          // Apply generated HTML and show controls
-          document.getElementById('big-graph-checkboxes').innerHTML = `<table><tr>${controlsHTML}</tr></table>`
-          document.getElementById('big-graph-controls').style.display = 'block'
-
-          // Bind click event for updating graph data
-          this._app.graphDisplayManager.initEventListeners()
           break
         }
       }
