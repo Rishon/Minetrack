@@ -33,5 +33,10 @@
 		"name": "Tiger Network",
 		"ip": "play.tigernetwork.cf",
 		"type": "PC"
+	},
+	{
+		"name": "SuperKor",
+		"ip": "mc.superkor.net",
+		"type": "PC"
 	}
 ]
