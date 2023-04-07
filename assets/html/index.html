@@ -24,63 +24,22 @@
     <div id="status-overlay">
       <img class="logo-image" src="../images/logo.ico" />
       <h1 class="logo-text">Sela Tracking</h1>
-      <div id="status-text">Establishing connection...</div>
+      <div id="status-text">...מבצע תקשורת</div>
     </div>
 
     <div id="push">
-      <div id="perc-bar"></div>
 
-      <header>
-        <div class="header-possible-row-break column-left">
-          <img class="logo-image" src="../images/logo.ico" />
-          <h1 class="logo-text">Sela Tracking</h1>
-          <p class="logo-status">
-            Counting
-            <span class="global-stat" id="stat_totalPlayers">0</span> players on
-            <span class="global-stat" id="stat_networks">0</span> Minecraft
-            servers.
-          </p>
-        </div>
-
-        <div class="header-possible-row-break column-right">
-          <div id="sort-by" class="header-button header-button-single">
-            <span class="icon-sort-amount-desc"></span> Sort By<br /><strong
-              id="sort-by-text"
-              >...</strong
-            >
-          </div>
-
-          <div
-            id="settings-toggle"
-            class="header-button header-button-single"
-            style="margin-left: 20px"
-          >
-            <span class="icon-gears"></span> Graph Controls
-          </div>
-        </div>
+      <header class="center">
+        <img class="logo-image" src="../images/logo.ico" />
+        <h1 class="logo-text">Sela Tracking</h1>
+        <p class="logo-status">
+          סופר
+          <span class="global-stat" id="stat_totalPlayers">0</span> שחקנים ב-
+          <span class="global-stat" id="stat_networks">0</span> שרתי מיינקראפט
+        </p>
       </header>
 
       <div id="big-graph"></div>
-
-      <div id="big-graph-controls">
-        <div id="big-graph-controls-drawer">
-          <div id="big-graph-checkboxes"></div>
-
-          <span class="graph-controls-setall">
-            <a minetrack-show-type="all" class="button graph-controls-show"
-              ><span class="icon-eye"></span> Show All</a
-            >
-            <a minetrack-show-type="none" class="button graph-controls-show"
-              ><span class="icon-eye-slash"></span> Hide All</a
-            >
-            <a
-              minetrack-show-type="favorites"
-              class="button graph-controls-show"
-              ><span class="icon-star"></span> Only Favorites</a
-            >
-          </span>
-        </div>
-      </div>
 
       <div id="server-list"></div>
     </div>

@@ -170,6 +170,11 @@ footer a:hover {
   color: var(--text-color);
 }
 
+.center {
+  text-align: center;
+  align-items: center;
+}
+
 /* Status overly */
 #status-overlay {
   padding: 20px 0;
