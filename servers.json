@@ -1,17 +1,37 @@
 [
 	{
-		"name": "Hypixel",
-		"ip": "mc.hypixel.net",
+		"name": "TopStrix",
+		"ip": "play.topstrix.net",
 		"type": "PC"
 	},
 	{
-		"name": "Mineplex",
-		"ip": "us.mineplex.com",
+		"name": "Sela Mixers",
+		"ip": "play.rishon.systems",
 		"type": "PC"
 	},
 	{
-		"name": "CubeCraft",
-		"ip": "play.cubecraft.net",
+		"name": "Parla Games",
+		"ip": "parlagames.co.il",
+		"type": "PC"
+	},
+	{
+		"name": "IsraelMC",
+		"ip": "play.israelmc.online",
+		"type": "PC"
+	},
+	{
+		"name": "BenderIL",
+		"ip": "benderil.com",
+		"type": "PC"
+	},
+	{
+		"name": "BREEZYLAND",
+		"ip": "play.breezyland.gq",
+		"type": "PC"
+	},
+	{
+		"name": "Tiger Network",
+		"ip": "play.tigernetwork.cf",
 		"type": "PC"
 	}
 ]
