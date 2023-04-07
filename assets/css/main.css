@@ -151,12 +151,13 @@ header .header-button-single:hover {
 /* Footer */
 footer {
   display: none;
-  background: var(--background-color);
+  background: transparent;
   color: var(--text-color);
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
   padding: 10px 0;
   text-align: center;
+  font-size: small;
   width: 90%;
   margin: 15px auto 0 auto;
 }
