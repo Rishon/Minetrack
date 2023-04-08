@@ -101,7 +101,12 @@ export function formatMinecraftVersions (versions, knownVersions) {
 export function formatTimestampSeconds (secs) {
   const date = new Date(0)
   date.setUTCSeconds(secs)
-  return date.toLocaleDateString();
+  return date.toLocaleDateString('en-US', {
+    timeZone: 'Asia/Jerusalem',
+    day: '2-digit',
+    month: '2-digit',
+    year: '2-digit'
+  }).replace(/(\d+)\/(\d+)\/(\d+)/, '$2/$1/$3');
 }
 
 export function formatDate(secs) {

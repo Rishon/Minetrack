@@ -15,7 +15,7 @@
   --color-dark-blue: #0984e3;
   --color-light-blue: #74b9ff;
 
-  --theme-color-dark: #3B3738;
+  --theme-color-dark: #282b30;
   --theme-color-light: #EBEBEB;
 
   --border-radius: 1px;
@@ -178,7 +178,7 @@ footer a:hover {
 /* Status overly */
 #status-overlay {
   padding: 20px 0;
-  background: var(--background-color);
+  background: transparent;
   color: var(--text-color);
   border-radius: var(--border-radius);
   text-align: center;
@@ -236,7 +236,7 @@ footer a:hover {
   --fixed-server-favicon-size: 64px;
   width: var(--fixed-server-favicon-size);
   height: var(--fixed-server-favicon-size);
-  border-radius: var(--border-radius);
+  border-radius: 25%;
   margin-top: 5px;
 }
 
@@ -266,32 +266,14 @@ footer a:hover {
 }
 
 .server .column-status .server-value {
-  color: var(--color-dark-gray);
+  color: #C190C6;
   font-size: 16px;
+  font-weight: 700;
 }
 
 .server .column-graph {
   height: 100px;
   width: 400px;
-}
-
-/* Favorite icons */
-.server-is-favorite {
-  cursor: pointer;
-  color: var(--color-gold);
-}
-
-.server-is-favorite:hover::before {
-  content: "\f006";
-}
-
-.server-is-not-favorite {
-  cursor: pointer;
-  color: var(--background-color);
-}
-
-.server-is-not-favorite:hover {
-  color: var(--color-gold);
 }
 
 /* Highlighted values */

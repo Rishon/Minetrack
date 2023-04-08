@@ -91,7 +91,7 @@ export class ServerRegistration {
             if (typeof playerCount !== 'number') {
               this._app.tooltip.hide()
             } else {
-              this._app.tooltip.set(pos.left, pos.top, 10, 10, `${formatNumber(playerCount)} Players<br>${formatTimestampSeconds(this._graphData[0][id])}`)
+              this._app.tooltip.set(pos.left, pos.top, 10, 10, `מחוברים ${formatNumber(playerCount)} שחקנים<br>${formatTimestampSeconds(this._graphData[0][id])}`)
             }
           } else {
             this._app.tooltip.hide()
@@ -115,9 +115,9 @@ export class ServerRegistration {
       series: [
         {},
         {
-          stroke: '#E9E581',
+          stroke: '#7053b8',
           width: 2,
-          value: (_, raw) => `${formatNumber(raw)} Players`,
+          value: (_, raw) => `${formatNumber(raw)} שחקנים`,
           spanGaps: true,
           points: {
             show: false
@@ -237,13 +237,13 @@ export class ServerRegistration {
 
     if (ping.error) {
       this._hideValue('player-count')
-      this._renderValue('error', ping.error.message)
+      this._renderValue('error', "שגיאה בפינג")
     } else if (typeof ping.playerCount !== 'number') {
       this._hideValue('player-count')
 
       // If the frontend has freshly connection, and the server's last ping was in error, it may not contain an error object
       // In this case playerCount will safely be null, so provide a generic error message instead
-      this._renderValue('error', 'Failed to ping')
+      this._renderValue('error', 'שגיאה בפינג')
     } else if (typeof ping.playerCount === 'number') {
       this._hideValue('error')
       this._renderValue('player-count', formatNumber(ping.playerCount))
