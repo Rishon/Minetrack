@@ -38,5 +38,10 @@
 		"name": "SuperKor",
 		"ip": "mc.superkor.net",
 		"type": "PC"
+	},
+	{
+		"name": "XServers",
+		"ip": "xservers.xyz",
+		"type": "PC"
 	}
 ]
