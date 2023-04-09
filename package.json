@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cryptkeeper/Minetrack.git"
+    "url": "git+https://github.com/Rishon/Minetrack.git"
   },
   "keywords": [
     "minetrack"
@@ -23,9 +23,9 @@
   "author": "Nick Krecklow <hello@npm.nklow.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Cryptkeeper/Minetrack/issues"
+    "url": "https://github.com/Rishon/Minetrack/issues"
   },
-  "homepage": "https://github.com/Cryptkeeper/Minetrack#README",
+  "homepage": "https://github.com/Rishon/Minetrack#README",
   "engines": {
     "node": ">=12.4.0"
   },
