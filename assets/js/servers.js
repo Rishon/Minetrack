@@ -2,7 +2,7 @@ import uPlot from 'uplot'
 
 import { RelativeScale } from './scale'
 
-import { formatNumber, formatTimestampSeconds, formatDate, formatMinecraftServerAddress } from './util'
+import { formatNumber, formatDate, formatMinecraftServerAddress } from './util'
 import { uPlotTooltipPlugin } from './plugins'
 
 import MISSING_FAVICON from 'url:../images/missing_favicon.ico'
@@ -91,7 +91,7 @@ export class ServerRegistration {
             if (typeof playerCount !== 'number') {
               this._app.tooltip.hide()
             } else {
-              this._app.tooltip.set(pos.left, pos.top, 10, 10, `מחוברים ${formatNumber(playerCount)} שחקנים<br>${formatTimestampSeconds(this._graphData[0][id])}`)
+              this._app.tooltip.set(pos.left, pos.top, 10, 10, `מחוברים ${formatNumber(playerCount)} שחקנים<br>${formatDate(this._graphData[0][id])}`)
             }
           } else {
             this._app.tooltip.hide()
@@ -226,7 +226,7 @@ export class ServerRegistration {
       this._renderValue('record', (element) => {
         if (ping.recordData.timestamp > 0) {
           element.innerText = `${formatNumber(ping.recordData.playerCount)} (${formatDate(ping.recordData.timestamp)})`
-          element.title = `At ${formatDate(ping.recordData.timestamp)} ${formatTimestampSeconds(ping.recordData.timestamp)}`
+          element.title = `At ${formatDate(ping.recordData.timestamp)} ${formatDate(ping.recordData.timestamp)}`
         } else {
           element.innerText = formatNumber(ping.recordData.playerCount)
         }
