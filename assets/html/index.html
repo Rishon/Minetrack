@@ -14,9 +14,15 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Rishon" />
     <meta name="theme-color" content="#6c5ce7" />
-    <meta name="description" content="Live-Tracking Minecraft Israeli servers" />
-    <meta name="keywords" content="Minetrack, Israel, Minecraft, Servers, Server List, Live-Tracking" />
-  
+    <meta
+      name="description"
+      content="Live-Tracking Minecraft Israeli servers"
+    />
+    <meta
+      name="keywords"
+      content="Minetrack, Israel, Minecraft, Servers, Server List, Live-Tracking"
+    />
+
     <script defer type="module" src="../js/main.js"></script>
 
     <title>Sela Tracking</title>
@@ -42,6 +48,14 @@
       </header>
 
       <div id="big-graph"></div>
+
+      <div class="copy-success-box hidden">
+        <div class="copy-success-text">
+          Server Address copied to clipboard
+          <code id="ip-address-display">0.0.0.0</code>
+        </div>
+        <button class="copy-success-okay-btn" id="server-success-okay-btn">Okay</button>
+      </div>
 
       <div id="server-list"></div>
     </div>

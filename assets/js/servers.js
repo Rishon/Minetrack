@@ -2,7 +2,7 @@ import uPlot from 'uplot'
 
 import { RelativeScale } from './scale'
 
-import { formatNumber, formatDate, formatMinecraftServerAddress } from './util'
+import { formatNumber, formatDate, formatMinecraftServerAddress, copyIPToClipboard, closeCopySuccessBox } from './util'
 import { uPlotTooltipPlugin } from './plugins'
 
 import MISSING_FAVICON from 'url:../images/missing_favicon.ico'
@@ -298,6 +298,17 @@ export class ServerRegistration {
   }
 
   initEventListeners () {
-    //
+    document
+    .getElementById(`favicon_${this.serverId}`)
+    .addEventListener("click", () => {
+      copyIPToClipboard(this.data)
+    });
+
+    document
+    .getElementById(`server-success-okay-btn`)
+    .addEventListener("click", () => {
+      closeCopySuccessBox()
+    });
   }
+  
 }
