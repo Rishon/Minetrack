@@ -159,7 +159,7 @@ export function copyIPToClipboard(serverData) {
       document.body.appendChild(copySuccessOverlay);
 
       // Copy success box
-      document.getElementById("ip-address-display").innerText = `${IP}`;
+      document.getElementById("ip-address-display").innerText = `\n${IP}`;
       const copySuccessBox = document.querySelector(".copy-success-box");
       copySuccessBox.classList.remove("hidden");
 
