@@ -1,47 +1,42 @@
 [
-	{
-		"name": "TopStrix",
-		"ip": "play.topstrix.net",
-		"type": "PC"
-	},
-	{
-		"name": "Sela Mixers",
-		"ip": "play.rishon.systems",
-		"type": "PC"
-	},
-	{
-		"name": "Parla Games",
-		"ip": "parlagames.co.il",
-		"type": "PC"
-	},
-	{
-		"name": "IsraelMC",
-		"ip": "play.israelmc.online",
-		"type": "PC"
-	},
-	{
-		"name": "BenderIL",
-		"ip": "benderil.com",
-		"type": "PC"
-	},
-	{
-		"name": "BREEZYLAND",
-		"ip": "play.breezyland.gq",
-		"type": "PC"
-	},
-	{
-		"name": "Tiger Network",
-		"ip": "play.tigernetwork.cf",
-		"type": "PC"
-	},
-	{
-		"name": "SuperKor",
-		"ip": "mc.superkor.net",
-		"type": "PC"
-	},
-	{
-		"name": "XServers",
-		"ip": "xservers.xyz",
-		"type": "PC"
-	}
+  {
+    "name": "TopStrix",
+    "ip": "play.topstrix.net",
+    "type": "PC"
+  },
+  {
+    "name": "Sela Mixers",
+    "ip": "play.rishon.systems",
+    "type": "PC"
+  },
+  {
+    "name": "Parla Games",
+    "ip": "parlagames.co.il",
+    "type": "PC"
+  },
+  {
+    "name": "IsraelMC",
+    "ip": "play.israelmc.online",
+    "type": "PC"
+  },
+  {
+    "name": "BenderIL",
+    "ip": "benderil.com",
+    "type": "PC"
+  },
+  {
+    "name": "Tiger Network",
+    "ip": "play.tigernetwork.cf",
+    "type": "PC"
+  },
+  {
+    "name": "SuperKor",
+    "ip": "mc.superkor.net",
+    "type": "PC"
+  },
+  {
+    "name": "XServers",
+    "ip": "xservers.xyz",
+    "type": "PC"
+  }
 ]
