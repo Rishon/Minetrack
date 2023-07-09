@@ -12,7 +12,8 @@
     "interval": 3600000
   },
   "database": {
-    "connection_url": "mongodb://<username>:<password>@<ip>:27017/?authMechanism=DEFAULT&authSource=admin",
+    "connection_url": "mongodb://<parameters>",
+    "database": "minetrack",
     "logToDatabase": true
   },
   "logFailedPings": true,
