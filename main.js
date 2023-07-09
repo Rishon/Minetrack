@@ -30,7 +30,7 @@ if (!config.serverGraphDuration) {
   config.serverGraphDuration = 3 * 60 * 10000
 }
 
-if (!config.logToDatabase) {
+if (!config.database.logToDatabase) {
   logger.log('warn', 'Database logging is not enabled. You can enable it by setting "logToDatabase" to true in config.json. This requires sqlite3 to be installed.')
 
   app.handleReady()

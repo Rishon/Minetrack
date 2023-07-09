@@ -1,18 +1,25 @@
 {
-	"site": {
-		"port": 3005,
-		"ip": "0.0.0.0"
-	},
-	"rates": {
-		"pingAll": 3000,
-		"connectTimeout": 2500
-	},
-	"oldPingsCleanup": {
-		"enabled": false,
-		"interval": 3600000
-	},
-	"logFailedPings": true,
-	"logToDatabase": true,
-	"graphDuration": 86400000,
-	"serverGraphDuration": 180000
+  "site": {
+    "port": 3005,
+    "ip": "0.0.0.0"
+  },
+  "rates": {
+    "pingAll": 3000,
+    "connectTimeout": 2500
+  },
+  "oldPingsCleanup": {
+    "enabled": false,
+    "interval": 3600000
+  },
+  "database": {
+    "host": "localhost",
+    "database": "minetrack",
+    "username": "minetrack",
+    "password": "minetrack_password",
+    "port": 3306,
+    "logToDatabase": true
+  },
+  "logFailedPings": true,
+  "graphDuration": 86400000,
+  "serverGraphDuration": 180000
 }
