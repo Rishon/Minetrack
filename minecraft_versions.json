@@ -1,148 +1,160 @@
 {
-	"PC": [
-		{
-			"name": "1.7.2",
-			"protocolId": 4
-		},
-		{
-			"name": "1.7.10",
-			"protocolId": 5
-		},
-		{
-			"name": "1.8",
-			"protocolId": 47
-		},
-		{
-			"name": "1.9",
-			"protocolId": 107
-		},
-		{
-			"name": "1.9.1",
-			"protocolId": 108
-		},
-		{
-			"name": "1.9.2",
-			"protocolId": 109
-		},
-		{
-			"name": "1.9.4",
-			"protocolId": 110
-		},
-		{
-			"name": "1.10",
-			"protocolId": 210
-		},
-		{
-			"name": "1.11",
-			"protocolId": 315
-		},
-		{
-			"name": "1.11.2",
-			"protocolId": 316
-		},
-		{
-			"name": "1.12",
-			"protocolId": 335
-		},
-		{
-			"name": "1.12.1",
-			"protocolId": 338
-		},
-		{
-			"name": "1.12.2",
-			"protocolId": 340
-		},
-		{
-			"name": "1.13",
-			"protocolId": 393
-		},
-		{
-			"name": "1.13.1",
-			"protocolId": 401
-		},
-		{
-			"name": "1.13.2",
-			"protocolId": 404
-		},
-		{
-			"name": "1.14",
-			"protocolId": 477
-		},
-		{
-			"name": "1.14.1",
-			"protocolId": 480
-		},
-		{
-			"name": "1.14.2",
-			"protocolId": 485
-		},
-		{
-			"name": "1.14.3",
-			"protocolId": 490
-		},
-		{
-			"name": "1.14.4",
-			"protocolId": 498
-		},
-		{
-			"name": "1.15",
-			"protocolId": 573
-		},
-		{
-			"name": "1.15.1",
-			"protocolId": 575
-		},
-		{
-			"name": "1.15.2",
-			"protocolId": 578
-		},
-		{
-			"name": "1.16",
-			"protocolId": 735
-		},
-		{
-			"name": "1.16.1",
-			"protocolId": 736
-		},
-		{
-			"name": "1.16.2",
-			"protocolId": 751
-		},
-		{
-			"name": "1.16.3",
-			"protocolId": 753
-		},
-		{
-			"name": "1.16.5",
-			"protocolId": 754
-		},
-		{
-			"name": "1.17",
-			"protocolId": 755
-		},
-		{
-			"name": "1.18.1",
-			"protocolId": 757
-		},
-		{
-			"name": "1.18.2",
-			"protocolId": 758
-		},
-		{
-			"name": "1.19",
-			"protocolId": 759
-		},
-		{
-			"name": "1.19.2",
-			"protocolId": 760
-		},
-		{
-			"name": "1.19.3",
-			"protocolId": 761
-		},
-		{
-			"name": "1.19.4",
-			"protocolId": 762
-		}
-	]
+  "PC": [
+    {
+      "name": "1.7.2",
+      "protocolId": 4
+    },
+    {
+      "name": "1.7.10",
+      "protocolId": 5
+    },
+    {
+      "name": "1.8",
+      "protocolId": 47
+    },
+    {
+      "name": "1.9",
+      "protocolId": 107
+    },
+    {
+      "name": "1.9.1",
+      "protocolId": 108
+    },
+    {
+      "name": "1.9.2",
+      "protocolId": 109
+    },
+    {
+      "name": "1.9.4",
+      "protocolId": 110
+    },
+    {
+      "name": "1.10",
+      "protocolId": 210
+    },
+    {
+      "name": "1.11",
+      "protocolId": 315
+    },
+    {
+      "name": "1.11.2",
+      "protocolId": 316
+    },
+    {
+      "name": "1.12",
+      "protocolId": 335
+    },
+    {
+      "name": "1.12.1",
+      "protocolId": 338
+    },
+    {
+      "name": "1.12.2",
+      "protocolId": 340
+    },
+    {
+      "name": "1.13",
+      "protocolId": 393
+    },
+    {
+      "name": "1.13.1",
+      "protocolId": 401
+    },
+    {
+      "name": "1.13.2",
+      "protocolId": 404
+    },
+    {
+      "name": "1.14",
+      "protocolId": 477
+    },
+    {
+      "name": "1.14.1",
+      "protocolId": 480
+    },
+    {
+      "name": "1.14.2",
+      "protocolId": 485
+    },
+    {
+      "name": "1.14.3",
+      "protocolId": 490
+    },
+    {
+      "name": "1.14.4",
+      "protocolId": 498
+    },
+    {
+      "name": "1.15",
+      "protocolId": 573
+    },
+    {
+      "name": "1.15.1",
+      "protocolId": 575
+    },
+    {
+      "name": "1.15.2",
+      "protocolId": 578
+    },
+    {
+      "name": "1.16",
+      "protocolId": 735
+    },
+    {
+      "name": "1.16.1",
+      "protocolId": 736
+    },
+    {
+      "name": "1.16.2",
+      "protocolId": 751
+    },
+    {
+      "name": "1.16.3",
+      "protocolId": 753
+    },
+    {
+      "name": "1.16.5",
+      "protocolId": 754
+    },
+    {
+      "name": "1.17",
+      "protocolId": 755
+    },
+    {
+      "name": "1.18.1",
+      "protocolId": 757
+    },
+    {
+      "name": "1.18.2",
+      "protocolId": 758
+    },
+    {
+      "name": "1.19",
+      "protocolId": 759
+    },
+    {
+      "name": "1.19.2",
+      "protocolId": 760
+    },
+    {
+      "name": "1.19.3",
+      "protocolId": 761
+    },
+    {
+      "name": "1.19.4",
+      "protocolId": 762
+    },
+    {
+      "name": "1.20.1",
+      "protocolId": 763
+    },
+    {
+      "name": "1.20.2",
+      "protocolId": 764
+    },
+    {
+      "name": "1.20.4",
+      "protocolId": 765
+    }
+  ]
 }
